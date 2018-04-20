@@ -10,6 +10,8 @@
             <li><a href="/productos/mostrar">Productos</a></li>
             <li><a href="/private">Zona privada</a></li>
             <li><a href="/empleados">Empleados</a></li>
+            <li><a href="/twitterUserTimeLine">Twitter</a></li>
+            <li><a href="/noticias">Artículos</a></li>
             <li><a href="/private/salir">Cerrar Sesion</a></li>
 
           </ul>

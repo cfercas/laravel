@@ -2,6 +2,33 @@
 
   @section('contenido')
     <div class="post">
+      
+          <form action="/send" class="form-signin" method="post">
+              {{ csrf_field() }}
+              <h2 class="form-signin-heading">Envia un mensaje como Telegram Bot</h2>
+              <img class="icons" src="{{asset('Future\images\telegram.png')}}" >
+              <label for="inputText" class="sr-only">Mensaje</label>
+              <textarea name="message" type="text" id="inputText" class="form-control" placeholder="Añade aqui tu mensaje" required autofocus></textarea>
+              <br />
+              <button class="btn btn-lg btn-primary btn-block" type="submit">Enviar</button>
+              <a class="button"  href="https://t.me/joinchat/F17apA9XAzHFt69NOFXiHg" target="_blank">Unete a nuestro grupo de telegram</a><br/>
+
+              <p>***Para poder unirte al grupo de telegram tienes que hacer click desde un smartphone o tener instalada la aplicacion Telegram Desktop</p>
+          </form>
+          <br />
+          @if(Session::has('message'))
+              <div class="alert alert-{{ Session::get('status') }} status-box">
+                  <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                  {{ Session::get('message') }}
+              </div>
+          @endif
+
+    </div>
+    <div class="post">
+
+
+    </div>
+    <div class="post">
       <h1>Ideas para el proyecto</h1>
       <p>Voy a crear una tienda de productos con una pagina de inicio, que los usuarios se puedan registrar,
        e iniciar sesion, que puedan hacer la lista de la compra, antes de registrarse e introducir los datos
@@ -37,4 +64,8 @@
           Para ver todas mi rutas ejecuta el siguiente comando en la consola: <strong>php artisan route:list</strong>
         </p>
     </div>
+
+
+
+
   @endsection

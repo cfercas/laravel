@@ -1,8 +1,26 @@
-@extends('plantilla')
+@extends('plantilla.plantilla')
 @section('contenido')
+  @if (Auth::check() && Auth::user()-> type == "Admin")
+    <div class="post">
+      <h1>Formulario con ckeditor</h1>
+      {!! Form::open(array('route' => 'post.articulo','method'=>'POST')) !!}
+         <textarea class="ckeditor" name="ckeditor" id="ckeditor" rows="20" cols="150">
+           Añade tu artículo aquí.
+         </textarea>
+         {!! Form::submit('Enviar') !!}
+        {!! Form::close() !!}
+    </div>
+  @endif
 
 
 <!-- Post -->
+  @foreach ($articulos as $articulo)
+    <article class="post">
+      {!! $articulo -> articulo  !!}
+
+    </article>
+  @endforeach
+<!--
   <article class="post">
     <header>
       <div class="title">
@@ -28,7 +46,7 @@
     </footer>
   </article>
 
-<!-- Post -->
+
   <article class="post">
     <header>
       <div class="title">
@@ -54,7 +72,7 @@
     </footer>
   </article>
 
-<!-- Post -->
+
   <article class="post">
     <header>
       <div class="title">

@@ -3,6 +3,7 @@
     <div class="mini-posts">
 
       <!-- Mini Post -->
+
         <article class="mini-post">
           <header>
             <h3><a href="#">Sobre nosotros</a></h3>
@@ -21,7 +22,6 @@
           </header>
           <a href="#" class="image"><img src="{{ asset('Future/images/productos/4.jpg') }}" alt="" /></a>
         </article>
-
       <!-- Mini Post -->
         <article class="mini-post">
           <header>
@@ -31,6 +31,8 @@
           </header>
           <a href="#" class="image"><img src="{{ asset('Future/images/pic06.jpg') }}" alt="" /></a>
         </article>
+
+        <a class="twitter-timeline" data-lang="es" data-width="320" data-height="400" data-theme="light" data-link-color="#19CF86" href="https://twitter.com/lp_cristina?ref_src=twsrc%5Etfw">Tweets by lp_cristina</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
       <!-- Mini Post
         <article class="mini-post">

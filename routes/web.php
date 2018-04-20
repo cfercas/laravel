@@ -68,13 +68,26 @@ Route::get('cart/update/{producto}/{cantidad}', [
 ]);
 
 //Rutas chungas
-Route::get('/home1', function () {
+/*Route::get('/home1', function () {
     return view('home1');
-});
+});*/
+Route::get('/noticias', 'CkeditorController@index');
+Route::post('/articulo', [
+    'as' => 'post.articulo',
+    'uses' => 'CkeditorController@guardar',
+]);
 
 
+//Twitter
 
+Route::get('twitterUserTimeLine', 'TwitterController@twitterUserTimeLine');
+Route::post('tweet', ['as'=>'post.tweet','uses'=>'TwitterController@tweet']);
 
+//Telegram
+Route::get('/', 'TelegramController@getHome');
+Route::get('get-updates',   'TelegramController@getUpdates');
+Route::get('send',  'TelegramController@getSendMessage');
+Route::post('send', 'TelegramController@postSendMessage');
 
 
 

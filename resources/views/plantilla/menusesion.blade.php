@@ -8,6 +8,7 @@
           <ul>
             <li><a href="/home" id="home">Inicio</a></li>
             <li><a href="/productos/mostrar" id="productos">Productos</a></li>
+            <li><a href="/noticias">Artículos</a></li>
             <li><a href="/private/salir">Cerrar Sesion</a></li>
             <li><a href="/private">Tus Datos</a></li>
             <li style="float:right;margin:20px"><a href="{{ route('mostrar-carrito') }}"><img src={{ asset('imagenes/carrito.ico') }} width='25' height='25' onclick=""></a></li>

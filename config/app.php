@@ -164,6 +164,10 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         Anhskohbo\NoCaptcha\NoCaptchaServiceProvider::class,
+        Thujohn\Twitter\TwitterServiceProvider::class,
+        Unisharp\Ckeditor\ServiceProvider::class,
+        Telegram\Bot\Laravel\TelegramServiceProvider::class,
+
         //intervencion de imagenes - Añadido por Cristina
         //Intervention\Image\ImageServiceProvider::class,
         /*
@@ -238,6 +242,8 @@ return [
         'Image' => Intervention\Image\Facades\Image::class,
         'Input' => Illuminate\Support\Facades\Input::class,
         'NoCaptcha' => Anhskohbo\NoCaptcha\Facades\NoCaptcha::class,
+        'Twitter' => Thujohn\Twitter\Facades\Twitter::class,
+        'Telegram'  => Telegram\Bot\Laravel\Facades\Telegram::class,
     ],
 
 ];

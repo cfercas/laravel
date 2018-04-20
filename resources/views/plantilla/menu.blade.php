@@ -10,7 +10,10 @@
             <li><a href="/productos/mostrar" id="productos">Productos</a></li>
             <li><a href="/private">Inicia Sesion</a></li>
             <li><a href="/registro">Registrate</a></li>
-              <li><a href="/empleados">Prueba</a></li>
+            <li><a href="/empleados">Prueba</a></li>
+            <li><a href="/noticias">Artículos</a></li>
+            <li><a id="myBtn" href="#">Soporte</a></li>
+
             <li style="float:right;margin:20px"><a href="{{ route('mostrar-carrito') }}"><img src={{ asset('imagenes/carrito.ico') }} width='25' height='25' onclick=""></a></li>
           </ul>
         </nav>
